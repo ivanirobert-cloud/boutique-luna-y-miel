@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Luna y miel . Lencería fina y Perfumes</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+       <header>
+
+    <h1>BOUTIQUE LUNA Y MIEL</h1>
+
+    <p>Lencería fina · Perfumes · Varios</p>
+
+    <nav>
+
+        <a href="#" onclick="mostrarContacto(); return false;">
+            📞 CONTACTO
+        </a>
+
+        <a href="#tablas-talles" onclick="cerrarCategorias(); cerrarContacto();">
+    📏 TABLA DE TALLES
+</a>
+
+        <a href="#">
+            🔥 OFERTAS
+        </a>
+        <a href="#" onclick="mostrarCompartir(); return false;">
+            ⤴ COMPARTIR
+</a>
+
+    </nav>
+       <div id="menu-compartir" style="display: none;">
+
+    <a id="compartir-whatsapp" href="#" target="_blank">
+        📱 WhatsApp
+    </a>
+
+    <a id="compartir-email" href="#">
+        ✉️ Correo
+    </a>
+
+    <button id="copiar-enlace" type="button">
+        🔗 Copiar enlace
+    </button>
+
+    <button id="cerrar-compartir" type="button">
+        ❌ Cerrar
+    </button>
+
+</div>
+    <section id="contacto" style="display: none;">
+
+        <h2>📞 Contacto</h2>
+
+        <a href="https://wa.me/5493388535647" target="_blank">
+            💬 ESCRIBIR POR WHATSAPP
+        </a>
+
+        <a href="mailto:b.lunaymiel@gmail.com">
+            ✉️ ESCRIBIR POR EMAIL
+        </a>
+
+        <button onclick="cerrarContacto()">
+            ❌ CERRAR
+        </button>
+
+    </section>
+
+</header>
+<section id="publicacion-principal">
+    <img src="img/publiprinc.jpg" alt="Publicación principal de Boutique Luna Íntima">
+</section>
+<section id="tablas-talles">
+
+    <h2>📏 Tabla de talles</h2>
+
+    <button onclick="mostrarTalle('mujeres')">
+        👩 MUJERES
+    </button>
+
+    <button onclick="mostrarTalle('niñas')">
+        👧 NIÑAS
+    </button>
+
+    <button onclick="mostrarTalle('hombres')">
+        👨 HOMBRES
+    </button>
+
+    <button onclick="mostrarTalle('niños')">
+        👦 NIÑOS
+    </button>
+
+    <div id="imagen-talle"></div>
+
+    <button id="cerrar-tabla" onclick="cerrarTabla()" style="display: none;">
+        ❌ CERRAR TABLA
+    </button>
+
+</section>
+    <main>
+
+<section id="productos">
+
+    <button id="boton-categorias" onclick="mostrarCategorias()">
+        📦 CATEGORÍAS
+    </button>
+
+    <div id="menu-categorias" style="display: none;">
+
+        <button onclick="mostrarCategoria('mujer')">
+            👩 MUJERES
+        </button>
+
+        <button onclick="mostrarCategoria('hombre')">
+            👨 HOMBRES
+        </button>
+
+        <button onclick="mostrarCategoria('niñas')">
+            👧 NIÑAS
+        </button>
+
+        <button onclick="mostrarCategoria('niños')">
+            👦 NIÑOS
+        </button>
+
+        <button onclick="mostrarCategoria('perfumes')">
+            🌸 PERFUMES
+        </button>
+
+    </div>
+
+    <div id="catalogo"></div>
+
+</section>
+<section id="carrito">
+    <h2>🛒 Carrito</h2>
+
+    <div id="lista-carrito">
+        <p>El carrito está vacío.</p>
+    </div>
+
+    <p id="total">Total: $0</p> 
+    <button id="confirmar-pedido" type="button">📧 CONFIRMAR PEDIDO</button>  
+</section>
+    </main>
+
+    <footer>
+        <p>© 2026 - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

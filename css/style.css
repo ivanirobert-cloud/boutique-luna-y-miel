@@ -1,0 +1,240 @@
+h1, h2 {
+    font-family: "Comic Sans MS", cursive;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8e8ee;
+}
+
+
+header {
+    text-align: center;
+    padding: 40px;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+}
+nav {
+    margin-top: 25px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    transform: scale(1.05);
+}
+footer {
+    text-align: center;
+    padding: 20px;
+}
+#productos {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.producto {
+    width: 250px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.producto h3 {
+    font-family: "Comic Sans MS", cursive;
+}
+
+.producto button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.producto button:hover {
+    transform: scale(1.05);
+}
+#tablas-talles {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.opciones-talles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.opciones-talles button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease; 
+}
+
+.opciones-talles button:hover {
+    transform: scale(1.05);
+}
+
+#imagen-talle img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+}
+#carrito {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+#carrito h2 {
+    text-align: center;
+    font-family: "Comic Sans MS", cursive;
+}
+
+#lista-carrito > div {
+    padding: 15px 0;
+    text-align: center;
+}
+
+#lista-carrito button {
+    padding: 6px 10px;
+    margin: 3px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#lista-carrito button:hover {
+    transform: scale(1.05);
+}
+
+#total {
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#publicacion-principal {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#publicacion-principal img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+     border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+h2::after {
+    content: " ✦ ";
+    display: block;
+    margin-top: 6px;
+    font-size: 0.7em;
+    opacity: 0.6;
+}
+#cerrar-tabla {
+    display: block;
+    margin: 15px auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+#productos > section {
+    margin: 50px 0;
+    padding: 25px 15px;
+}
+.producto summary {
+    cursor: pointer;
+    font-size: 1.15em;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+    list-style: none;
+    transition: transform 0.2s ease;
+}
+
+.producto summary:hover {
+    transform: scale(1.03);
+}
+
+.producto summary::-webkit-details-marker {
+    display: none;
+}
+
+.producto img {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+@media (max-width: 600px) {
+
+    .producto {
+        width: 90%;
+        max-width: 350px;
+        margin: 20px auto;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .producto summary {
+        font-size: 1.1em;
+        padding: 15px 10px;
+    }
+
+    .producto img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        margin: 20px auto;
+    }
+}
+.categorias-productos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.categorias-productos button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: transform 0.2s ease;
+}
+
+.categorias-productos button:hover {
+    transform: scale(1.05);
+}
