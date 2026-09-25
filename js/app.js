@@ -29,7 +29,7 @@ const productos = {
             imagen: "img/mujeres/bragaconaberturabrillantecintalateral10500.jpg"
         },
         {
-            nombre: "Bragas con puntillas",
+            nombre: "Vedetina con puntilla",
             precio: 8000,
             unidad: "c/u",
             talle: "Consultar",
@@ -163,6 +163,70 @@ const productos = {
             talle: "Consultar",
             stock: "Consultar",
             imagen: "img/mujeres/zapatillasadidassupernova52100.jpg"
+        },
+        {
+            nombre: "Colaless regulable Morley de microfibra",
+            precio: 4500,
+            unidad: "c/u",
+            talle: "Consultar",
+            stock: "Consultar",
+            imagen: "img/mujeres/agregar/colalessregulablemorleydemicrofibra4500c-u.jpg"
+        },
+        {
+            nombre: "Conjunto básico triangulito de algodón",
+            precio: 6750,
+            unidad: "",
+            talle: "Consultar",
+            stock: "Consultar",
+            imagen: "img/mujeres/agregar/conjuntobasicotriangulitoalgodon6750.jpg"
+        },
+        {
+            nombre: "Conjunto bralette de puntilla con tanga",
+            precio: 11500,
+            unidad: "c/u",
+            talle: "Consultar",
+            stock: "Consultar",
+            imagen: "img/mujeres/agregar/conjuntobralettedepuntillacontanga11500c-u.jpg"
+        },
+        {
+            nombre: "Conjunto colaless microteen fluo",
+            precio: 12800,
+            unidad: "",
+            talle: "Consultar",
+            stock: "Consultar",
+            imagen: "img/mujeres/agregar/conjuntocolalessmicroteenfluo12800.jpg"
+        },
+        {
+            nombre: "Conjunto soft de microfibra con colaless regulable",
+            precio: 13500,
+            unidad: "c/u",
+            talle: "Consultar",
+            stock: "Consultar",
+            imagen: "img/mujeres/agregar/conjuntosoftmicrofibracolalessregulable13500c-u.jpg"
+        },
+        {
+            nombre: "Top de algodón y lycra con puntilla",
+            precio: 13800,
+            unidad: "c/u",
+            talle: "Consultar",
+            stock: "Consultar",
+            imagen: "img/mujeres/agregar/topdealgodonlycraconpuntilla13800c-u.jpg"
+        },
+        {
+            nombre: "Vedetina de microfibra estampada",
+            precio: 3900,
+            unidad: "c/u",
+            talle: "Consultar",
+            stock: "Consultar",
+            imagen: "img/mujeres/agregar/vedetinamicrofibraestampada3900c-u.jpg"
+        },
+        {
+            nombre: "Zapatillas deportivas",
+            precio: null,
+            unidad: "",
+            talle: "Consultar",
+            stock: "Consultar",
+            imagen: "img/mujeres/agregar/zapatillas-consultarstockprecioynro-.jpg"
         }
     ],
 
@@ -172,7 +236,41 @@ const productos = {
 
     niños: [],
 
-    perfumes: []
+    perfumes: [
+        {
+            nombre: "Calzado acuático",
+            precio: null,
+            unidad: "",
+            talle: "Consultar",
+            stock: "Consultar",
+            imagen: "img/detallesmix/calzadoacuatico.jpg"
+        },
+        {
+            nombre: "Medias con detalles",
+            precio: 3500,
+            unidad: "el par",
+            talle: "Consultar",
+            stock: "Consultar",
+            imagen: "img/detallesmix/mediasecondetalles3500cadapar.jpg"
+        },
+        {
+            nombre: "Perfume árabe en tubo + crema",
+            precio: null,
+            unidad: "",
+            detallePrecio: "Perfume en tubo: $3.000 · Perfume + crema: $4.000",
+            talle: "Consultar",
+            stock: "Consultar",
+            imagen: "img/detallesmix/perfumearabetubo3000perfumemascrema4000.jpg"
+        },
+        {
+            nombre: "Medias bajas",
+            precio: 3500,
+            unidad: "cada par",
+            talle: "Consultar",
+            stock: "Consultar",
+            imagen: "img/detallesmix/medias3500.jpg"
+        }
+    ]
 };
 
 function agregarAlCarrito(nombre, precio) {
@@ -314,7 +412,7 @@ if (compartirWhatsapp) {
         const url = window.location.href;
 
         const texto =
-            "Mirá Boutique Luna y Miel — Lencería fina, Perfumes y Varios";
+            "Mirá Boutique Luna y Miel — Lencería fina, Detalles y Varios";
 
         compartirWhatsapp.href =
             "https://wa.me/?text=" +
@@ -331,7 +429,7 @@ if (compartirEmail) {
         const asunto = "Boutique Luna y Miel";
 
         const cuerpo =
-            "Te comparto Boutique Luna y Miel — Lencería fina, Perfumes y Varios:\n\n" +
+            "Te comparto Boutique Luna y Miel — Lencería fina, Detalles y Varios:\n\n" +
             url;
 
         compartirEmail.href =
@@ -419,22 +517,30 @@ function mostrarCategoria(categoria) {
 
     if (!listaProductos || listaProductos.length === 0) {
 
+        const tituloCategoria =
+            categoria === "perfumes" ? "DETALLES EXTRA" : categoria;
+
         catalogo.innerHTML = `
-            <h2>${categoria}</h2>
+            <h2>${tituloCategoria}</h2>
             <p>Próximamente nuevos productos.</p>
         `;
 
         return;
     }
 
-    let contenido = `<h2>${categoria}</h2>`;
+    const tituloCategoria =
+        categoria === "perfumes" ? "DETALLES EXTRA" : categoria;
+
+    let contenido = `<h2>${tituloCategoria}</h2>`;
 
     listaProductos.forEach(function(producto) {
 
-        const precioTexto = producto.precio === null
-            ? "Consultar precio"
-            : "$" + producto.precio.toLocaleString("es-AR") +
-              (producto.unidad ? " " + producto.unidad : "");
+        const precioTexto = producto.detallePrecio
+            ? producto.detallePrecio
+            : producto.precio === null
+                ? "Consultar precio"
+                : "$" + producto.precio.toLocaleString("es-AR") +
+                  (producto.unidad ? " " + producto.unidad : "");
 
         contenido += `
             <details class="producto">
